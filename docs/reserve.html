@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserve Table - Honey's Sea Food Cafe</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <span class="wave">≋</span> 
+                Honey's Sea Food Cafe 
+                <span class="wave">≋</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html#menu">Menu</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="#" class="reserve-btn">Reserve Table</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="reservation-section">
+        <h2>Reserve Your Table</h2>
+        
+        <div class="reservation-content">
+            <form class="reservation-form">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="date">Date</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="guests">Number of Guests</label>
+                    <select id="guests" name="guests" required>
+                        <option value="">Select number of guests</option>
+                        <option value="1">1 Person</option>
+                        <option value="2">2 People</option>
+                        <option value="3">3 People</option>
+                        <option value="4">4 People</option>
+                        <option value="5">5 People</option>
+                        <option value="6">6 People</option>
+                        <option value="7+">7+ People</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Select Time Slot</label>
+                    <div class="time-slots">
+                        <div class="time-slot">
+                            <input type="radio" id="time1" name="time" value="11:00">
+                            <label for="time1">11:00 AM</label>
+                        </div>
+                        <div class="time-slot">
+                            <input type="radio" id="time2" name="time" value="12:00">
+                            <label for="time2">12:00 PM</label>
+                        </div>
+                        <div class="time-slot">
+                            <input type="radio" id="time3" name="time" value="13:00">
+                            <label for="time3">1:00 PM</label>
+                        </div>
+                        <div class="time-slot">
+                            <input type="radio" id="time4" name="time" value="14:00">
+                            <label for="time4">2:00 PM</label>
+                        </div>
+                        <div class="time-slot">
+                            <input type="radio" id="time5" name="time" value="15:00">
+                            <label for="time5">3:00 PM</label>
+                        </div>
+                        <div class="time-slot">
+                            <input type="radio" id="time6" name="time" value="16:00">
+                            <label for="time6">4:00 PM</label>
+                        </div>
+                        <div class="time-slot">
+                            <input type="radio" id="time7" name="time" value="17:00">
+                            <label for="time7">5:00 PM</label>
+                        </div>
+                        <div class="time-slot">
+                            <input type="radio" id="time8" name="time" value="18:00">
+                            <label for="time8">6:00 PM</label>
+                        </div>
+                        <div class="time-slot">
+                            <input type="radio" id="time9" name="time" value="19:00">
+                            <label for="time9">7:00 PM</label>
+                        </div>
+                        <div class="time-slot">
+                            <input type="radio" id="time10" name="time" value="20:00">
+                            <label for="time10">8:00 PM</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="special-requests">Special Requests (Optional)</label>
+                    <textarea id="special-requests" name="special-requests" rows="3"></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Confirm Reservation</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Chatbot Container -->
+    <div class="chatbot-container">
+        <div class="chatbot-toggle" onclick="toggleChat()">
+            💬
+        </div>
+        <div class="chatbot-frame" id="chatbot">
+            <iframe height="430" width="350" src="https://bot.dialogflow.com/cd16a307-c97b-4c76-8d9e-494e0ed78f0f"></iframe>
+        </div>
+    </div>
+
+    <script>
+        function toggleChat() {
+            const chatbot = document.getElementById('chatbot');
+            chatbot.classList.toggle('show');
+        }
+    </script>
+</body>
+</html> 

@@ -1,0 +1,606 @@
+:root {
+    --primary-color: #79C2D0;
+    --secondary-color: #053B50;
+    --text-color: #333;
+    --light-bg: #F8F9FA;
+    --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: white;
+}
+
+/* Header and Navigation */
+header {
+    background-color: white;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: var(--card-shadow);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.logo {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2rem;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.wave {
+    color: var(--primary-color);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+.reserve-btn {
+    background-color: var(--primary-color);
+    color: white !important;
+    padding: 0.8rem 1.5rem;
+    border-radius: 50px;
+    transition: background-color 0.3s !important;
+}
+
+.reserve-btn:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 2rem;
+    background-color: white;
+}
+
+.hero h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 4.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    margin-bottom: 2rem;
+    max-width: 600px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Signature Dishes Section */
+.signature-section {
+    padding: 5rem 2rem;
+    background-color: var(--light-bg);
+}
+
+.signature-section h2 {
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    font-size: 3rem;
+    color: var(--secondary-color);
+    margin-bottom: 3rem;
+}
+
+.signature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.signature-item {
+    background: white;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 1.5rem;
+}
+
+.icon svg {
+    width: 100%;
+    height: 100%;
+    fill: var(--primary-color);
+}
+
+.signature-item h3 {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+}
+
+.signature-item p {
+    color: #666;
+}
+
+/* Menu Section */
+.menu-section {
+    padding: 8rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.menu-section h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3.5rem;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.menu-card {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: var(--card-shadow);
+    transition: transform 0.3s ease;
+}
+
+.menu-card:hover {
+    transform: translateY(-5px);
+}
+
+.menu-item {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.item-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.fish-icon {
+    width: 24px;
+    height: 24px;
+    fill: var(--primary-color);
+}
+
+.menu-item h3 {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    font-weight: 600;
+}
+
+.menu-item p {
+    color: #666;
+    font-size: 1rem;
+    margin: 0.5rem 0;
+}
+
+.price {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+/* About Section */
+.about-section {
+    padding: 8rem 2rem;
+    background-color: white;
+}
+
+.about-section h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3.5rem;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.about-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 3rem;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: var(--card-shadow);
+    text-align: center;
+}
+
+.utensil-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 2rem;
+}
+
+.utensil-icon svg {
+    width: 100%;
+    height: 100%;
+    fill: var(--primary-color);
+}
+
+.about-text p {
+    color: #555;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+.about-text p:last-child {
+    margin-bottom: 0;
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 8rem 2rem;
+    background-color: white;
+}
+
+.contact-section h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3.5rem;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.contact-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 3rem;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: var(--card-shadow);
+    text-align: center;
+}
+
+.contact-item {
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.contact-icon {
+    width: 32px;
+    height: 32px;
+}
+
+.contact-icon svg {
+    width: 100%;
+    height: 100%;
+    fill: var(--primary-color);
+}
+
+.contact-item p {
+    color: #555;
+    font-size: 1.2rem;
+}
+
+.contact-info {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid #eee;
+}
+
+.contact-info p {
+    color: #555;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.address {
+    margin-bottom: 0.5rem;
+}
+
+/* Reservation Section */
+.reservation-section {
+    padding: 8rem 2rem;
+    background-color: white;
+}
+
+.reservation-section h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3.5rem;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.reservation-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 3rem;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: var(--card-shadow);
+}
+
+.reservation-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    color: var(--secondary-color);
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.time-slots {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.time-slot {
+    position: relative;
+}
+
+.time-slot input[type="radio"] {
+    display: none;
+}
+
+.time-slot label {
+    display: block;
+    padding: 0.8rem;
+    text-align: center;
+    background-color: #f8f9fa;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.time-slot input[type="radio"]:checked + label {
+    background-color: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+.time-slot label:hover {
+    border-color: var(--primary-color);
+}
+
+.submit-btn {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem;
+    border: none;
+    border-radius: 50px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 1rem;
+}
+
+.submit-btn:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Chatbot Styles */
+.chatbot-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.chatbot-toggle {
+    width: 60px;
+    height: 60px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 2rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.chatbot-toggle:hover {
+    transform: scale(1.1);
+}
+
+.chatbot-frame {
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    display: none;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.chatbot-frame.show {
+    display: block;
+}
+
+.chatbot-frame iframe {
+    border: none;
+    background-color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    
+    .hero h1 {
+        font-size: 3rem;
+    }
+    
+    .signature-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .menu-section {
+        padding: 6rem 1rem;
+    }
+    
+    .menu-section h2 {
+        font-size: 2.5rem;
+    }
+
+    .about-section {
+        padding: 6rem 1rem;
+    }
+
+    .about-section h2 {
+        font-size: 2.5rem;
+    }
+
+    .about-content {
+        padding: 2rem;
+    }
+
+    .about-text p {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    .contact-section {
+        padding: 6rem 1rem;
+    }
+
+    .contact-section h2 {
+        font-size: 2.5rem;
+    }
+
+    .contact-content {
+        padding: 2rem;
+    }
+
+    .contact-item p {
+        font-size: 1rem;
+    }
+
+    .contact-info p {
+        font-size: 1rem;
+    }
+
+    .reservation-section {
+        padding: 6rem 1rem;
+    }
+
+    .reservation-section h2 {
+        font-size: 2.5rem;
+    }
+
+    .reservation-content {
+        padding: 2rem;
+    }
+
+    .time-slots {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    }
+
+    .chatbot-frame {
+        bottom: 80px;
+        right: 10px;
+        width: calc(100% - 20px);
+        max-width: 350px;
+    }
+    
+    .chatbot-toggle {
+        width: 50px;
+        height: 50px;
+        font-size: 1.7rem;
+    }
+} 
